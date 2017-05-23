@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/foundation.css" />
+<link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/style.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/modernizr.js"></script>
+</head>
+<body>
+<section id="header">
+  <div class="row">
+  </div>
+</section>
+<section id="info" class="page3 page4">
+  <div class="row">
+    <div class="content">
+      <div class="info left">
+        <div class="small-2 text-center     none columns">
+          <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_autobackup.png" alt="" />
+        </div>
+        <div class="small-10      none columns">
+          <h5>Autobackup</h5>
+          <h6>How often do you want to back up automatically?</h6>
+        </div>
+      </div>
+      <div class="labels">
+        <div class="small-8 small-centered columns">
+          <div class="small-4   none columns">
+            <div class="panel text-center purple">
+              <h3>Autobackup</h3>
+              <h4>12 h</h4>
+              <h3 class="small orange">Normal</h3>
+              <input name="normal" type="radio" />
+              <h3 class="border">Select</h3>
+            </div>
+          </div>
+          <div class="small-4   none columns">
+            <div class="panel text-center green">
+              <h3>Autobackup</h3>
+              <h4>12 h</h4>
+              <h3 class="small blue">Most Popular</h3>
+              <input name="most_popular" type="radio" checked />
+              <h3 class="border">Select</h3>
+            </div>
+          </div>
+          <div class="small-4   none columns">
+            <div class="panel text-center purple blue">
+              <h3>Autobackup</h3>
+              <h4>48 h</h4>
+              <h3 class="small orange">Normal</h3>
+              <input name="autobackup" type="radio" />
+              <h3 class="border">Select</h3>
+            </div>
+          </div>
+          <div class="small-12 text-center columns">
+            <a class="continue border" href="/page5.html" id="next-button">Continue</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="footer">
+          <div class="small-6 columns none">
+            <ul>
+              <li><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_lock.png" alt="" /> 256-Bit SSL Secure Connection</li>
+            </ul>
+          </div>
+          <div class="small-6 text-right columns none">
+            <ul>
+              <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_mca.png" alt="" /></a></li>
+              <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_norton.png" alt="" /></a></li>
+            </ul>
+          </div>
+        </div>
+  </div>
+</section>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script>
+$(function() {
+  $('input[name="most_popular"]').on('click', function() {
+    $('input[name="autobackup"]').prop('checked', false);
+    $('input[name="normal"]').prop('checked', false);
+  });
+
+  $('input[name="autobackup"]').on('click', function() {
+    $('input[name="most_popular"]').prop('checked', false);
+    $('input[name="normal"]').prop('checked', false);
+  });
+
+  $('input[name="normal"]').on('click', function() {
+    $('input[name="most_popular"]').prop('checked', false);
+    $('input[name="autobackup"]').prop('checked', false);
+  });
+});
+
+</script>
+</body>
+</html>

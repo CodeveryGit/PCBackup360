@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/foundation.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/modernizr.js"></script>
+    <style>
+        .field
+        {
+            clear: both;
+            position: relative;
+        }
+        .error-message
+        {
+            border-radius: 2px;
+            background-color: #FF7F7F;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            display: none;
+            z-index: 500;
+        }
+        input:invalid:focus + .error-message
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<section id="header">
+    <div class="row">
+    </div>
+</section>
+<section id="info">
+    <div class="row">
+        <div class="content">
+            <div class="info left">
+                <div class="small-2 none columns text-center">
+                    <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_upload.png" alt="" />
+                </div>
+                <div class="small-10 none columns">
+                    <h5>Unlimited PC Backup</h5>
+                    <h6>
+                        Protect your documents, folders, movies, videos, pictures and more
+                    </h6>
+                </div>
+            </div>
+            <div class="small-6   none columns">
+                <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_pc.png" alt="" />
+            </div>
+
+            <div class="small-6 columns no-padding-left create-account-form">
+                <form id="userdata">
+                    <input type="hidden" name="campaign" value="3" />
+                    <input type="hidden" name="affid" value="713EE5C6" />
+                    <p>Create Your FREE Backup Account</p>
+                    <div class="small-6 columns no-padding-left">
+                        <div class="field">
+                            <input type="text" name="fname" tabindex="1" placeholder="First Name" required flags />
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="small-6 padding-right columns">
+                        <div class="field">
+                            <input type="text" name="lname" tabindex="2" placeholder="Last Name" required flags />
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" placeholder="Email" required tabindex="3">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="field">
+                        <input type="password" placeholder="Password" tabindex="4" required />
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="small-12 text-right none columns">
+                        <input type="submit" id="next-button" value="Start Backup" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="small-6 columns none">
+                <ul>
+                    <li><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_lock.png" alt="" /> 256-Bit SSL Secure Connection</li>
+                </ul>
+            </div>
+            <div class="small-6 text-right columns none">
+                <ul>
+                    <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_mca.png" alt="" /></a></li>
+                    <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_norton.png" alt="" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+<script src="/1.js"></script>
+</body>
+</html>

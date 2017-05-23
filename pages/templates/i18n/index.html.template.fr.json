@@ -1,0 +1,20 @@
+{
+  "256_bit_ssl_secure_connection": " 256-Bit SSL Secure Connection",
+  "continue_backup": "Continuer la Sauvegarde",
+  "create_backup_account": "Créez un Compte de Sauvegarde",
+  "email": "Email",
+  "exit_without_back_up": "Ne pas protéger mon PC avec une sauvegarde",
+  "first_name": "Prénom",
+  "last_name": "Nom",
+  "ok": "Ok",
+  "password": "Mot de Passe",
+  "pc_backup_wizard_for_windows": "Assistant Windows PC Backup",
+  "pc_backup_wizard_for_windows1": "Assistant Windows PC Backup",
+  "protect_your_documents_folders_movies_videos_pictures_and_more": "Protégez vos documents, dossiers, films, vidéos, photos et plus encore... automatiquement!",
+  "remind": "rappeler",
+  "start_backup": "Sauvegarder Maintenant",
+  "stop": "arrêter",
+  "stop_backup": "arrêter la sauvegarde",
+  "stop_but_remind_me_later": "Arrêter, mais me le rappeler plus tard",
+  "unlimited_free_pc_backup": "Sauvegarde Gratuite de votre PC"
+}

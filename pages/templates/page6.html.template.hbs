@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation2.css"/>
+    <link rel="stylesheet" href="css/style2.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info" class="page5 page6">
+      <div class="row">
+        <div class="large-12 small-12 small-only-text-center header text-left heading top columns">
+          <div class="large-6 medium-6 none columns">
+            <h3>
+              {{pc_backup_wizard_for_windows1}}
+            </h3>
+          </div>
+          <div class="large-6 medium-6 small-12 small-only-text-center links text-right columns">
+            <ul>
+              <li>
+<a href="page5.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page6.html"><img src="images/img_dot_active.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page7.html"><img src="images/img_dot_normal.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page8.html"><img src="images/img_dot_normal.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="large-1 medium-2 small-12 text-center none columns">
+<img src="images/img_upload.png" alt=""/>
+            </div>
+            <div class="large-11 medium-10 small-12 small-only-text-center none columns">
+              <h5>
+                {{uploading_your_data}}
+              </h5>
+              <h6>
+                {{we_keep_your_files_in_synk}}
+              </h6>
+            </div>
+          </div>
+          <div class="panel left">
+            <div class="large-1 medium-2 text-center none columns">
+<img src="images/img_disk_cancel.png" alt=""/>
+            </div>
+            <div class="large-11 medium-10 columns">
+              <h3>
+                {{michael_pc}}
+              </h3>
+              <div class="progress">
+<span class="js-meter meter" style="width: 25%"></span>
+              </div>
+              <div class="large-6 medium-6 padding-left columns" style="width: 100%; overflow: overlay">
+                <h5 class="js-uploading-text">
+                  {{uploading}}
+                </h5>
+              </div>
+              <div class="large-6 medium-6 text-right padding-right columns">
+                <h6 class="red js-error-text">
+                </h6>
+              </div>
+              <div class="large-2 medium-4 padding-left text columns">
+                <h5>
+<img src="images/green_box.png" alt=""/>{{backed_up}}
+                </h5>
+              </div>
+              <div class="large-3 medium-4 padding-left text left columns">
+                <h5>
+<img src="images/red_box.png" alt=""/>{{not_backed_up}}
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="large-12 error columns js-error-overlay" style="visibility: hidden; pointer-events: none; opacity: 0;">
+            <div class=" left">
+              <div class="large-1 medium-1 text-right padding-right columns">
+<a href="#"><img src="images/img_close.png" alt=""/></a>
+              </div>
+              <div class="large-6 medium-6 columns">
+                <p>{{some_of_your_files_have_not_been_uploaded_please_add_more_space_to_your_account}}</p>
+              </div>
+              <div class="large-5 medium-5 text-right columns">
+<a class="space" href="#">{{add_space}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer page2">
+          <div class="large-6 medium-8 columns">
+            <ul>
+              <li>
+<a href="#">{{stop_backup}}</a>
+              </li>
+              <li>
+<img src="images/img_lock.png" alt=""/>{{256_bit_ssl_secure_connection}}
+              </li>
+            </ul>
+          </div>
+          <div class="large-6 medium-4 text-right columns">
+            <ul>
+              <li>
+<a href="#"><img src="images/logo_mca.png" alt=""/></a>
+              </li>
+              <li>
+<a href="#"><img src="images/logo_norton.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+  $(document).foundation();
+</script><script>
+ $(function() {
+   var $meter = $('.js-meter');
+   $meter.css({width: '0%'});
+   $('.js-error-text').css({display: 'none'});
+   var i = 10;
+   var j = 0;
+   var $uploadingText = $('.js-uploading-text');
+   var files = ["C:\\MyPC\\My Pictures\\42994.jpg", "C:\\MyPC\\My Pictures\\family.jpg", "C:\\MyPC\\My Pictures\\data411.jpg",
+      "C:\\MyPC\\My Pictures\\val1.png", "C:\\MyPC\\Videos\\home_video.mov", "C:\\MyPC\\Videos\\5252.mov",
+      "C:\\MyPC\\Videos\\2252.avi", "C:\\MyPC\\Documents\\system.doc", "C:\\MyPC\\Documents\\4292.txt", "C:\\MyPC\\Documents\\worksheet.xls",
+      "C:\\MyPC\\Documents\\Doc1.docx","C:\\Windows\\System32\\driver.icf","C:\\Windows\\System32\\win.exe","C:\\Windows\\Programs\\notepad.exe","C:\\Windows\\System32\\disk.dll",
+      "C:\\MyPC\\My Pictures\\paris.jpg","C:\\MyPC\\My Pictures\\wallpaper.jpg","C:\\MyPC\\My Pictures\\city.jpg"];
+   var interval = setInterval(function() {
+     $uploadingText.text('Uploading ' + files[j % files.length] + '...');
+     j++;
+   }, 60);
+   var minterval = setInterval(function() {
+     $meter.animate({width: i + '%'});
+     i += 10;
+
+     if (i > 30) {
+       clearInterval(minterval);
+       clearInterval(interval);
+       $('.js-uploading-text').text('Failed to upload').parent().css({width: '50%'});
+       $('.js-error-text').text('Not enough space').css({display: 'block'});
+       $('.js-error-overlay').css({
+         'pointer-events': 'all',
+         visibility: 'visible',
+       }).animate({
+         opacity: 1
+       });
+     }
+   }, 2000);
+ });
+</script>
+  </body>
+</html>
+

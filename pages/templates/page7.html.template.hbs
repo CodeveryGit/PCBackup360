@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation2.css"/>
+    <link rel="stylesheet" href="css/style2.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info" class="page7">
+      <div class="row">
+        <div class="large-12 small-12 small-only-text-center header text-left heading top columns">
+          <div class="large-6 medium-6 none columns">
+            <h3>
+              {{pc_backup_wizard_for_windows1}}
+            </h3>
+          </div>
+          <div class="large-6 medium-6 small-12 small-only-text-center links text-right columns">
+            <ul>
+              <li>
+<a href="page5.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page6.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page7.html"><img src="images/img_dot_active.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page8.html"><img src="images/img_dot_normal.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="large-12 small-12 small-only-text-center columns">
+              <h5>
+                {{unfortunately_your_free_account_has_reached_it_s_storage_limit}}
+              </h5>
+              <h6>
+                {{upgrade_your_account_to_our_unlimited_plan_to_protect_all_your_files}}
+              </h6>
+            </div>
+          </div>
+          <div class="bg left" style="height:175px;">
+            <div class="large-3 medium-3 small-12 small-only-text-center img none columns">
+<img src="images/img_pc_three.png" alt=""/>
+            </div>
+            <div class="large-9 medium-8 small-12 small-only-text-center text-center columns">
+              <div class="border">
+                <h3>
+                  {{special_discount_1_account_upgrade}}
+                </h3>
+                <h4>
+                  {{special_discount_expires_mar_6_2016}}
+                </h4>
+              </div>
+              <p class="small">{{_upgrading_your_account_gives_you_access_to_our_full_unlimited_backup_product_for_a_trial_period_you_pay_only_1_today_after_fourteen_days_of_access_you_will_be_automatically_charged_at_our_low_yearly_discount_package_rate_of_6_95_month_please_read_our}}<a href="#">{{billing_terms}}</a>{{for_more_information}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="large-6 medium-6 columns">
+            <ul>
+              <li>
+<a href="#">{{stop_backup}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="large-6 medium-6 text-left columns">
+<a class="accept" href="#">{{accept_offer}}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+	$(document).foundation();
+</script>
+  </body>
+</html>
+

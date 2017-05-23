@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/loaders.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info" class="page2">
+      <div class="row">
+        <div class="small-12  header text-left heading top columns">
+          <h3>
+            {{pc_backup_wizard_for_windows1}}
+          </h3>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="small-2 text-center none columns">
+<img src="images/img_searching.png" alt=""/>
+            </div>
+            <div class="small-10 none columns">
+              <h5>
+                {{searching}}
+              </h5>
+              <h6>
+                {{wait_while_we_are_searching_your_files}}
+              </h6>
+            </div>
+          </div>
+          <div class="panel left">
+            <div class="small-2 none columns">
+<img src="images/img_disk.png" alt=""/>
+            </div>
+            <div class="small-10 columns">
+              <h3>
+                {{michael_pc}}
+              </h3>
+              <div class="js-progress progress [ # small-#] [secondary alert success] [radius round]">
+<span class="meter" style="width: 0%"></span>
+              </div>
+              <div class="small-6 padding-left columns">
+                <h5 class="js-current-status">
+                  {{all_files_found}}
+                </h5>
+              </div>
+              <div class="small-6 text-right padding-right columns">
+                <h6>
+                  {{complete}}
+                </h6>
+              </div>
+            </div>
+            <div class="small-8 padding-left links columns js-loaders">
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_photos.png" alt=""/>{{photos}}</a>
+              </div>
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_videos.png" alt=""/>{{videos}}</a>
+              </div>
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_documents.png" alt=""/>{{documents}}</a>
+              </div>
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_application.png" alt=""/>{{aplicatons}}</a>
+              </div>
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_text.png" alt=""/>{{text}}</a>
+              </div>
+              <div class="small-4 columns">
+<a href="#"><img src="images/img_info.png" alt=""/>{{information}}</a>
+              </div>
+            </div>
+            <div class="small-4 right text-right columns">
+<a class="js-continue continue" href="page3.html" style="opacity: 0.6; pointer-events: none;">{{continue}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="small-6 columns none">
+            <ul>
+              <li style="margin-left: 0">
+<a href="#">{{stop_backup}}</a>
+              </li>
+              <li>
+<img src="images/img_lock.png" alt=""/>{{256_bit_ssl_secure_connection}}
+              </li>
+            </ul>
+          </div>
+          <div class="small-6 text-right columns none">
+            <ul>
+              <li>
+<a href="#"><img src="images/logo_mca.png" alt=""/></a>
+              </li>
+              <li>
+<a href="#"><img src="images/logo_norton.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+$(document).foundation();
+    </script><script>
+/**
+ * Calls an async action on each element of an array in series
+ * @param {Array} arr
+ * @param {Function} action Should take the element as the first argument and a
+ *   callback function as the second; also passes the index and the full list
+ * @param {Function} cb A callback function
+ */
+
+function eachSeries(arr, action, cb) {
+  var i = 0;
+  var stop = arr.length - 1;
+
+  function dispatch() {
+    action(arr[i], function(err) {
+      if (err) return cb(err);
+      if (i === stop) return cb();
+
+      i += 1;
+      dispatch();
+      return null;
+    }, i, arr);
+  }
+
+  dispatch();
+}
+
+/**
+ * Runs the mock loader
+ */
+
+function runLoader($loader, cb, i) {
+  var $spinner = $('<div class="spinner" data-loader="circle-side"></div>');
+  var $currStatus = $('.js-current-status');
+  $spinner.css({
+    position: 'absolute',
+    top: 6,
+    left: -6,
+    height: '20',
+    width: '20'
+  });
+  $loader.append($spinner);
+  $loader.css({
+    opacity: 1,
+  });
+  $currStatus.text('Finding ' + $loader.text() + '...');
+
+  $('.progress span').animate({
+    width: Math.floor((100 / 6) * (i + 1)) + '%',
+  }, 10000);
+
+  setTimeout(function() {
+    $loader.find('.spinner').remove();
+
+    cb();
+  }, 10000);
+}
+
+/*!
+ * Main entry point
+ */
+
+$(function(){
+  var $loaders = $('.js-loaders .columns');
+  $loaders.each(function(i, el) {
+    var $el = $(el);
+    $el.css({
+      opacity: 0.6,
+    });
+  });
+
+  eachSeries($loaders.get(), function(loader, cb, i) {
+    var $loader = $(loader);
+    runLoader($loader, cb, i);
+  }, function() {
+    $('.js-current-status').text('All files found!');
+    $('.js-continue').css({
+      opacity: 1,
+      'pointer-events': 'all'
+    });
+  });
+
+  $.post('https://a.spdse.com/pcbackup-registration/email.php', {
+    data: encodeURI('guid=' + guid + '&rand=' + Math.floor((Math.random() * 100000) + 1))
+  });
+});
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,20 @@
+{
+  "256_bit_ssl_secure_connection": " 256-Bit SSL Secure Connection",
+  "continue_backup": "Continue\n        Backup",
+  "create_backup_account": "Create Backup Account",
+  "email": "Email",
+  "exit_without_back_up": "Exit - without back up",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "ok": "Ok",
+  "password": "Password",
+  "pc_backup_wizard_for_windows": "PC Backup Wizard for Windows",
+  "pc_backup_wizard_for_windows1": "PC Backup Wizard for Windows",
+  "protect_your_documents_folders_movies_videos_pictures_and_more": "\n                Protect your documents, folders, movies, videos, pictures and more",
+  "remind": "remind",
+  "start_backup": "Start Backup",
+  "stop": "stop",
+  "stop_backup": "stop backup",
+  "stop_but_remind_me_later": "Stop, but remind me later",
+  "unlimited_free_pc_backup": "Unlimited Free PC Backup"
+}

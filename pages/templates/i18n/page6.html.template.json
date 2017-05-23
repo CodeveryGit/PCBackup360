@@ -1,0 +1,20 @@
+{
+  "256_bit_ssl_secure_connection": " 256-Bit SSL Secure Connection",
+  "add_space": "Add Space",
+  "backed_up": " Backed Up",
+  "continue_backup": "Continue\n        Backup",
+  "exit_without_back_up": "Exit - without back up",
+  "michael_pc": "Michael PC",
+  "not_backed_up": " Not Backed Up",
+  "ok": "Ok",
+  "pc_backup_wizard_for_windows": "PC Backup Wizard for Windows",
+  "pc_backup_wizard_for_windows1": "PC Backup Wizard for Windows",
+  "remind": "remind",
+  "some_of_your_files_have_not_been_uploaded_please_add_more_space_to_your_account": "Some of your files have not been uploaded. Please add more space to your account",
+  "stop": "stop",
+  "stop_backup": "stop backup",
+  "stop_but_remind_me_later": "Stop, but remind me later",
+  "uploading": "Uploading...",
+  "uploading_your_data": "Uploading Your Data...",
+  "we_keep_your_files_in_synk": "We keep your files in synk"
+}

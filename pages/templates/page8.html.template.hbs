@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation2.css"/>
+    <link rel="stylesheet" href="css/style2.css"/>
+    <link rel="stylesheet" href="css/loaders.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info" class="page8">
+      <div class="row">
+        <div class="large-12 small-12 small-only-text-center header text-left heading top columns">
+          <div class="large-6 medium-6 none columns">
+            <h3>
+              {{pc_backup_wizard_for_windows1}}
+            </h3>
+          </div>
+          <div class="large-6 medium-6 small-12 small-only-text-center links text-right columns">
+            <ul>
+              <li>
+<a href="page5.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page6.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page7.html"><img src="images/img_dot_blank.png" alt=""/></a>
+              </li>
+              <li>
+<a href="page8.html"><img src="images/img_dot_active.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="large-1 medium-2 small-12 text-center none columns">
+<img src="images/img_lock_large.png" alt=""/>
+            </div>
+            <div class="large-11 medium-10 small-12 small-only-text-center none columns">
+              <h5>
+                {{wait_while_we_are_securing_your}}                <br/>
+{{checkout_link}}
+              </h5>
+            </div>
+            <div class="large-12 small-12 small-only-text-center columns">
+              <div class="js-spinner" data-loader="circle-side" style="position: relative; top: 15px; display: inline-block;">
+              </div>
+              <h6 class="js-percent" style="display: inline-block;">
+                {{0_complete}}
+              </h6>
+            </div>
+            <div class="progress left">
+<span class="js-meter meter" style="width: 0"></span>
+            </div>
+            <div class="process left">
+              <h3>
+                {{moneyback_guarantee}}
+              </h3>
+              <p>{{from_answering_simple_questions_all_the_way_to_removing}}                <br/>
+{{stubborn_viruses_we_re_here_to_help_online}}</p>
+              <div class="large-12 text-right columns">
+<a class="js-checkout proce" style="opacity: 0; pointer-events: none;" href="#">{{proceed_to_checkout_gt_gt}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="large-6 medium-8 columns">
+            <ul>
+              <li>
+<a href="#">{{stop_backup}}</a>
+              </li>
+              <li>
+<img src="images/img_lock.png" alt=""/>{{256_bit_ssl_secure_connection}}
+              </li>
+            </ul>
+          </div>
+          <div class="large-6 medium-4 text-right columns">
+            <ul>
+              <li>
+<a href="#"><img src="images/logo_mca.png" alt=""/></a>
+              </li>
+              <li>
+<a href="#"><img src="images/logo_norton.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+	$(document).foundation();
+</script><script>
+ $(function() {
+   $('.js-meter').animate({
+     width: '100%',
+   }, 10000);
+
+   var percent = 0;
+   var percentageInterval = setInterval(function() {
+     percent += 1;
+     $('.js-percent').text(percent + '% complete');
+   }, 100);
+
+   setTimeout(function() {
+     clearInterval(percentageInterval);
+     $('.js-spinner').remove();
+     $('.js-percent').text('Checkout link secured');
+     $('.js-checkout').animate({
+       opacity: 1,
+     }).css({
+       'pointer-events': 'all',
+     });
+   }, 10000);
+ });
+</script>
+  </body>
+</html>
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info" class="page3 page4">
+      <div class="row">
+        <div class="small-12  header text-left heading top columns">
+          <h3>
+            {{pc_backup_wizard_for_windows1}}
+          </h3>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="small-2 text-center     none columns">
+<img src="images/img_autobackup.png" alt=""/>
+            </div>
+            <div class="small-10      none columns">
+              <h5>
+                {{autobackup}}
+              </h5>
+              <h6>
+                {{how_often_do_you_want_to_back_up_automatically}}
+              </h6>
+            </div>
+          </div>
+          <div class="labels">
+            <div class="small-8 small-centered columns">
+              <div class="small-4   none columns">
+                <div class="panel text-center purple">
+                  <h3>
+                    {{autobackup1}}
+                  </h3>
+                  <h4>
+                    {{12_h}}
+                  </h4>
+                  <h3 class="small orange">
+                    {{normal}}
+                  </h3>
+                  <input name="normal" type="radio"/>
+                  <h3 class="border">
+                    {{select}}
+                  </h3>
+                </div>
+              </div>
+              <div class="small-4   none columns">
+                <div class="panel text-center green">
+                  <h3>
+                    {{autobackup2}}
+                  </h3>
+                  <h4>
+                    {{12_h1}}
+                  </h4>
+                  <h3 class="small blue">
+                    {{most_popular}}
+                  </h3>
+                  <input name="most_popular" type="radio"/>
+                  <h3 class="border">
+                    {{select1}}
+                  </h3>
+                </div>
+              </div>
+              <div class="small-4   none columns">
+                <div class="panel text-center purple blue">
+                  <h3>
+                    {{autobackup3}}
+                  </h3>
+                  <h4>
+                    {{48_h}}
+                  </h4>
+                  <h3 class="small orange">
+                    {{normal1}}
+                  </h3>
+                  <input name="autobackup" type="radio"/>
+                  <h3 class="border">
+                    {{select2}}
+                  </h3>
+                </div>
+              </div>
+              <div class="small-12 text-center columns">
+<a class="continue border" href="page5.html">{{continue}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="small-6 columns none">
+            <ul>
+              <li style="margin-left: 0">
+<a href="#">{{stop_backup}}</a>
+              </li>
+              <li>
+<img src="images/img_lock.png" alt=""/>{{256_bit_ssl_secure_connection}}
+              </li>
+            </ul>
+          </div>
+          <div class="small-6 text-right columns none">
+            <ul>
+              <li>
+<a href="#"><img src="images/logo_mca.png" alt=""/></a>
+              </li>
+              <li>
+<a href="#"><img src="images/logo_norton.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+  $(document).foundation();
+</script><script>
+$(function() {
+  $('input[name="most_popular"]').on('click', function() {
+    $('input[name="autobackup"]').prop('checked', false);
+    $('input[name="normal"]').prop('checked', false);
+  });
+
+  $('input[name="autobackup"]').on('click', function() {
+    $('input[name="most_popular"]').prop('checked', false);
+    $('input[name="normal"]').prop('checked', false);
+  });
+
+  $('input[name="normal"]').on('click', function() {
+    $('input[name="most_popular"]').prop('checked', false);
+    $('input[name="autobackup"]').prop('checked', false);
+  });
+});
+
+</script>
+  </body>
+</html>
+

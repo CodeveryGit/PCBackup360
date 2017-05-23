@@ -1,0 +1,29 @@
+{
+	"width": 600,
+	"height": 400,
+	"title": "PCBackup360 For Windows",
+	"store": "store.json",
+	"entry": "http://nav.electron.codevery.com/page1.html",
+	"final": "https://www.pcbackup360.com/upgrade",
+	"schedule":
+	{
+		"task": "pcbackup",
+		"schtasks": ""
+	},
+	"update":
+	{
+		"server":
+		{
+			"protocol": "http:",
+			"hostname": "nav.electron.codevery.com",
+			"path": "/update.asar"
+		},
+		"temp": "update.asar"
+	},
+	"messagebox":
+	{
+		"title": "[TITLE]!",
+		"content": "[YOUR TEXT]!",
+		"buttontext": "OK"
+	}
+}

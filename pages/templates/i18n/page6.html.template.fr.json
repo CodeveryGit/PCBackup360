@@ -1,0 +1,20 @@
+{
+  "256_bit_ssl_secure_connection": " 256-Bit SSL Secure Connection",
+  "add_space": "Ajouter plus d'espace",
+  "backed_up": "Sauvegardé",
+  "continue_backup": "Continuer la Sauvegarde",
+  "exit_without_back_up": "Ne pas protéger mon PC avec une sauvegarde",
+  "michael_pc": "Michael PC",
+  "not_backed_up": "Pas Sauvegardé",
+  "ok": "Ok",
+  "pc_backup_wizard_for_windows": "Assistant Windows PC Backup",
+  "pc_backup_wizard_for_windows1": "Assistant Windows PC Backup",
+  "remind": "rappeler",
+  "some_of_your_files_have_not_been_uploaded_please_add_more_space_to_your_account": "Certains de vos fichiers n'ont pas été téléchargé, s'il vous plaît ajouter plus d'espace à votre compte",
+  "stop": "arrêter",
+  "stop_backup": "arrêter la sauvegarde",
+  "stop_but_remind_me_later": "Arrêter, mais me le rappeler plus tard",
+  "uploading": "L'ajout",
+  "uploading_your_data": "Télécharger Les Données",
+  "we_keep_your_files_in_synk": "Nous gardons vos données en synchronisation"
+}

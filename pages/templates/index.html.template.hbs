@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      {{pc_backup_wizard_for_windows}}
+    </title>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+<script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <div class="row">
+      </div>
+    </section>
+    <section id="info">
+      <div class="row">
+        <div class="small-12  header text-left heading top columns">
+          <h3>
+            {{pc_backup_wizard_for_windows1}}
+          </h3>
+        </div>
+        <div class="content">
+          <div class="info left">
+            <div class="small-2 none columns text-center">
+<img src="images/img_upload.png" alt=""/>
+            </div>
+            <div class="small-10 none columns">
+              <h5>
+                {{unlimited_free_pc_backup}}
+              </h5>
+              <h6>
+                {{protect_your_documents_folders_movies_videos_pictures_and_more}}
+              </h6>
+            </div>
+          </div>
+          <div class="small-6   none columns">
+<img src="images/img_pc.png" alt=""/>
+          </div>
+          <div class="small-6 columns no-padding-left create-account-form">
+            <form>
+              <p>{{create_backup_account}}</p>
+              <div class="small-6 columns no-padding-left">
+                <input type="text" placeholder="{{first_name}}"/>
+              </div>
+              <div class="small-6 padding-right columns">
+                <input type="text" placeholder="{{last_name}}"/>
+              </div>
+              <input type="text" placeholder="{{email}}"/>
+              <input type="text" placeholder="{{password}}"/>
+              <div class="small-12 text-right none columns">
+                <input type="submit" value="{{start_backup}}"/>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="small-6 columns none">
+            <ul>
+              <li style="margin-left: 0">
+<a href="#">{{stop_backup}}</a>
+              </li>
+              <li>
+<img src="images/img_lock.png" alt=""/>{{256_bit_ssl_secure_connection}}
+              </li>
+            </ul>
+          </div>
+          <div class="small-6 text-right columns none">
+            <ul>
+              <li>
+<a href="#"><img src="images/logo_mca.png" alt=""/></a>
+              </li>
+              <li>
+<a href="#"><img src="images/logo_norton.png" alt=""/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="close-ask-form" style="visibility: hidden">
+      <div>
+        <input type="radio" name="action" value="{{remind}}" checked onchange="ga('send', 'event', 'form', 'select', 'stop backup');"/>
+{{stop_but_remind_me_later}}
+      </div>
+      <div>
+        <input type="radio" name="action" value="{{stop}}" onchange="ga('send', 'event', 'form', 'select', 'close backup');"/>
+{{exit_without_back_up}}
+      </div>
+      <br/>
+      <button id="apply-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close ok');">
+        {{ok}}
+      </button>
+      <button id="hide-close-form-button" onclick="ga('send', 'event', 'form', 'click', 'close continue');">
+        {{continue_backup}}
+      </button>
+    </div>
+<script src="js/vendor/jquery.js"></script><script src="js/foundation.min.js"></script><script>
+     $(document).foundation();
+    </script>
+  </body>
+</html>
+
