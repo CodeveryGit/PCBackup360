@@ -1,13 +1,10 @@
 # PCBackup360
-Live url: https://www.hauskontor.de/ 
 
 ## Project Description
 PCBackup360 is a small Windows application used for cloud backup service promotion. PCBackup360 uses Electron.js for displaying remote HTML pages and Node.js for interaction with system API. Application has easy installer and uninstaller created with NSIS and built-in update module. 
 
 ## Technologies:
 * Electron.js
-* Node.js 
-* PHP
 * NSIS 
 
 ## Code example
